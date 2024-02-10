@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -6,9 +7,9 @@ function Header() {
       <h1>My Basketball App</h1>
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/teams">Teams</a></li>
-          <li><a href="/players">Players</a></li>
+          <li><Link to="/">History</Link></li>
+          <li><Link to="/teams">Teams</Link></li>
+          <li><Link to="/getbetter">Get Better</Link></li>
         </ul>
       </nav>
     </header>
