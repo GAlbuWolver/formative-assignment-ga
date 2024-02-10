@@ -1,6 +1,6 @@
 import React from 'react';
 
-function History() {
+function GetBetter() {
   return (
     <div>
       <h1>GetBetter Page</h1>
@@ -8,4 +8,4 @@ function History() {
   );
 }
 
-export default History;
+export default GetBetter;
