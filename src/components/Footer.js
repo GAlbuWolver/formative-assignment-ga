@@ -1,8 +1,8 @@
 import React from 'react';
-
+import './Footer.css'
 function Footer() {
   return (
-    <footer>
+    <footer className='footer'>
       <p>© 2024 Basketball Fanatics. All rights reserved.</p>
     </footer>
   );
