@@ -1,7 +1,7 @@
 /* Header.css */
 .header {
-    background-color: #333;
-    color: white;
+    background-color:#E94F37;
+    color: #F6F7EB;
     padding: 20px;
     text-align: center;
   }
@@ -17,7 +17,7 @@
   }
   
   .header nav ul li a {
-    color: white;
+    color:#F6F7EB;
     text-decoration: none;
   }
   
