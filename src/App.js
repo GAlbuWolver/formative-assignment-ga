@@ -9,20 +9,21 @@ import GetBetterPage from "./pages/GetBetter";
 function App() {
   return (
     <Router>
-      <div className="app-container">
-        <Header />
-        <div className="content">
-          <Routes>
-            <Route path="/" element={<HistoryPage />} />
-            <Route path="/teams" element={<TeamsPage />} />
-            <Route path="/getbetter" element={<GetBetterPage />} />
-          </Routes>
+      <div className="app-wrapper">
+        <div className="app-container">
+          <Header />
+          <div className="content">
+            <Routes>
+              <Route path="/" element={<HistoryPage />} />
+              <Route path="/teams" element={<TeamsPage />} />
+              <Route path="/getbetter" element={<GetBetterPage />} />
+            </Routes>
+          </div>
         </div>
         <Footer />
       </div>
     </Router>
   );
 }
-
 
 export default App;

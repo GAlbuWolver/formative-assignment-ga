@@ -14,23 +14,21 @@ function History() {
         <div className="col">
           <h1>About the Toronto Raptors </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            vulputate, sapien nec mollis congue, mi ante pretium turpis, quis
-            ultricies lorem metus consequat felis. Proin convallis sagittis
-            justo a faucibus. Aenean eu purus vestibulum, ullamcorper risus et,
-            finibus enim. Vivamus ut neque gravida, efficitur mi eu, auctor
-            ipsum. Nunc lacinia quam sit amet nisl sagittis, id molestie turpis
-            gravida. Nam vulputate dolor erat, eget elementum ligula porttitor
-            nec. Ut ultricies nunc ac augue tempus pretium. Sed consequat mi eu
-            augue luctus, at tempor ligula tristique. Sed sagittis feugiat
-            risus. Donec ut finibus velit, non facilisis urna. Nullam ac est ac
-            neque interdum ullamcorper. Donec lobortis scelerisque viverra.
-            Maecenas blandit et eros sed
+            The Toronto Raptors are a Canadian professional basketball team
+            based in Toronto. The Raptors compete in the National Basketball
+            Association (NBA) as a member of the Atlantic Division of the
+            Eastern Conference. The team plays its home games at Scotiabank
+            Arena, which it shares with the Toronto Maple Leafs of the National
+            Hockey League (NHL). The team was founded in 1995 as part of the
+            NBA's expansion into Canada, along with the Vancouver Grizzlies.
+            Since the 2001–02 season, the Raptors have been the only
+            Canadian-based team in the league, as the Grizzlies relocated from
+            Vancouver to Memphis, Tennessee.
           </p>
         </div>
       </div>
       <div className="row2">
-        <h1>Game Hihlights</h1>
+        <h1>Game Highlights</h1>
         <iframe
           width="500"
           height="300"
@@ -52,18 +50,17 @@ function History() {
         <div className="col">
           <h1>About the LA Lakers </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            vulputate, sapien nec mollis congue, mi ante pretium turpis, quis
-            ultricies lorem metus consequat felis. Proin convallis sagittis
-            justo a faucibus. Aenean eu purus vestibulum, ullamcorper risus et,
-            finibus enim. Vivamus ut neque gravida, efficitur mi eu, auctor
-            ipsum. Nunc lacinia quam sit amet nisl sagittis, id molestie turpis
-            gravida. Nam vulputate dolor erat, eget elementum ligula porttitor
-            nec. Ut ultricies nunc ac augue tempus pretium. Sed consequat mi eu
-            augue luctus, at tempor ligula tristique. Sed sagittis feugiat
-            risus. Donec ut finibus velit, non facilisis urna. Nullam ac est ac
-            neque interdum ullamcorper. Donec lobortis scelerisque viverra.
-            Maecenas blandit et eros sed
+            The Los Angeles Lakers are an American professional basketball team
+            based in Los Angeles. The Lakers compete in the National Basketball
+            Association (NBA) as a member of the Pacific Division of the Western
+            Conference. The Lakers play their home games at Crypto.com Arena, an
+            arena shared with the NBA's Los Angeles Clippers, the Los Angeles
+            Sparks of the Women's National Basketball Association, and the Los
+            Angeles Kings of the National Hockey League.[10] The Lakers are one
+            of the most successful teams in the history of the NBA, and have won
+            17 NBA championships, tied with the Boston Celtics for the most in
+            NBA history.[11] More recently, the Lakers were the champions of the
+            NBA's inaugural In-Season Tournament in 2023.
           </p>
         </div>
       </div>
