@@ -49,7 +49,6 @@ p td{
     border-bottom: 1px solid #dddddd;
   }
   
-  /* Row hover effect */
   .table-modern tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
   }
@@ -195,4 +194,49 @@ iframe {
 .input-modern:focus {
   border-color: #007bff; 
   outline: none; 
+}
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #393E41;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #dddddd;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #b23329;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #15b300;
 }
