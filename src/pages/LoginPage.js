@@ -10,10 +10,17 @@ const LoginPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    auth.login({ username });
-    navigate('/teams');
+    const validUsername = "admin";
+    const validPassword = "password123";
+  
+    if (username === validUsername && password === validPassword) {
+      auth.login({ username }); 
+      navigate('/teams'); 
+    } else {
+      alert("Invalid credentials"); 
+    }
   };
-
+  
   return (
     <div className="login-container">
       <form onSubmit={handleSubmit} className="login-form">
