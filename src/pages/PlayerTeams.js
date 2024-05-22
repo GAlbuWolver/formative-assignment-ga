@@ -5,7 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 function PlayerTeams() {
   const [games, setGames] = useState([]);
-  const [dbGames, setDbGames] = useState([]); 
+  const [dbGames, setDbGames] = useState([]);
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [deleteId, setDeleteId] = useState('');
   const [updateId, setUpdateId] = useState('');
@@ -32,7 +32,7 @@ function PlayerTeams() {
     fetchDbGames();
   }, [selectedDate]);
 
-  function sendDataToDB() {
+  const sendDataToDB = () => {
     games.forEach((game) => {
       const gameData = {
         id: game.id,
@@ -41,32 +41,32 @@ function PlayerTeams() {
         awayname: game.teams.visitors.name,
         awayscore: game.scores.visitors.points,
       };
-  
-      axios.post('http://localhost:8081/teams', gameData)
+
+      axios.post('http://localhost/bballdb/add_team.php', gameData)
         .then(response => {
           console.log('Data sent successfully for game', response.data);
-          fetchDbGames(); 
+          fetchDbGames();
         })
         .catch(error => {
           console.error('There was an error sending the data for game', game, error);
         });
     });
-  }
-  
+  };
+
   const handleDelete = () => {
-    axios.delete(`http://localhost:8081/teams/${deleteId}`)
+    axios.delete(`http://localhost/bballdb/delete_team.php?id=${deleteId}`)
       .then(() => {
         console.log(`Game with ID ${deleteId} deleted successfully.`);
-        setDeleteId(''); 
-        fetchDbGames(); 
+        setDeleteId('');
+        fetchDbGames();
       })
       .catch(error => {
         console.error('There was an error deleting the game:', error);
       });
   };
-  
+
   const handleUpdate = () => {
-    axios.put(`http://localhost:8081/teams/${updateId}`, {
+    axios.put(`http://localhost/bballdb/update_team.php?id=${updateId}`, {
       homescore: newHomeScore,
       awayscore: newAwayScore,
     })
@@ -75,17 +75,17 @@ function PlayerTeams() {
       setUpdateId('');
       setNewHomeScore('');
       setNewAwayScore('');
-      fetchDbGames(); 
+      fetchDbGames();
     })
     .catch(error => {
       console.error('There was an error updating the game:', error);
     });
   };
-  
+
   const fetchDbGames = async () => {
     try {
-      const response = await axios.get('http://localhost:8081/teams');
-      setDbGames(response.data); 
+      const response = await axios.get('http://localhost/bballdb/get_teams.php');
+      setDbGames(response.data);
     } catch (error) {
       console.error('There was an error fetching the games from the database:', error);
     }
@@ -130,40 +130,39 @@ function PlayerTeams() {
       </table>
 
       <div className='row'>
-        
         <div className="delete-section">
           <h1>Lets Add/Delete Some Games</h1>
-        <input
-          type="text"
-          className='input-modern '
-          value={deleteId}
-          onChange={(e) => setDeleteId(e.target.value)}
-          placeholder="Enter game ID to delete"
-        />
-        <div  className='row'>
-        <button className='button-modern' onClick={handleDelete}>Delete Game</button>
-        <button className='button-modern' onClick={sendDataToDB}>Send  Live Games to DB</button>
+          <input
+            type="text"
+            className='input-modern'
+            value={deleteId}
+            onChange={(e) => setDeleteId(e.target.value)}
+            placeholder="Enter game ID to delete"
+          />
+          <div className='row'>
+            <button className='button-modern' onClick={handleDelete}>Delete Game</button>
+            <button className='button-modern' onClick={sendDataToDB}>Send Live Games to DB</button>
+          </div>
         </div>
       </div>
-      </div>
-<div className='row'>
-  <h1>Don't like a game's outcome feel free to change its score. I just need that game's ID please!</h1>
+      <div className='row'>
+        <h1>Don't like a game's outcome? Feel free to change its score. I just need that game's ID please!</h1>
         <input
-        className='input-modern'
+          className='input-modern'
           type="text"
           value={updateId}
           onChange={(e) => setUpdateId(e.target.value)}
           placeholder="Enter game ID to update"
         />
         <input
-        className='input-modern'
+          className='input-modern'
           type="number"
           value={newHomeScore}
           onChange={(e) => setNewHomeScore(e.target.value)}
           placeholder="New Home Score"
         />
         <input
-        className='input-modern'
+          className='input-modern'
           type="number"
           value={newAwayScore}
           onChange={(e) => setNewAwayScore(e.target.value)}
@@ -171,7 +170,7 @@ function PlayerTeams() {
         />
         <button className='button-modern' onClick={handleUpdate}>Update Game</button>
       </div>
-    
+
       <h2>Games Preview from Database</h2>
       <table className='table-modern'>
         <thead>
@@ -196,8 +195,6 @@ function PlayerTeams() {
         </tbody>
       </table>
     </div>
-      
-  
   );
 }
 
